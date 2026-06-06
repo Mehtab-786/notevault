@@ -40,6 +40,8 @@ export default function RegisterPage() {
         return;
       }
 
+      localStorage.setItem("userId", data.data.id);
+      
       router.push("/dashboard");
     } catch (error) {
       console.error(error);

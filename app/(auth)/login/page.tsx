@@ -39,6 +39,8 @@ export default function LoginPage() {
         return;
       }
 
+      localStorage.setItem("userId", data.data.id);
+
       router.push("/dashboard");
     } catch (error) {
       console.error(error);
@@ -50,13 +52,10 @@ export default function LoginPage() {
 
   return (
     <main className="relative h-screen overflow-hidden bg-linear-to-br from-[#352F44] via-[#44444E] to-[#50577A] flex items-center justify-center px-4 py-4">
-      
       <div className="w-full max-w-6xl h-full max-h-225 overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl">
         <div className="grid h-full lg:grid-cols-2">
-          
           {/* LEFT SIDE */}
           <div className="hidden lg:flex relative overflow-hidden bg-linear-to-br from-[#352F44] via-[#44444E] to-[#5C5470]">
-            
             {/* Blur Effects */}
             <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-[#B9B4C7]/20 blur-3xl z-10" />
             <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#6B728E]/20 blur-3xl z-10" />
@@ -76,7 +75,6 @@ export default function LoginPage() {
           {/* RIGHT SIDE */}
           <div className="flex items-center justify-center bg-[#FAF0E6] p-6 sm:p-10">
             <div className="w-full max-w-md">
-              
               <div className="mb-8">
                 <h2 className="text-4xl font-black text-[#352F44]">
                   Welcome Back
@@ -88,7 +86,6 @@ export default function LoginPage() {
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-5">
-                
                 {/* Email */}
                 <div>
                   <label className="mb-2 block text-sm font-medium text-[#352F44]">
