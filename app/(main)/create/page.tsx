@@ -49,8 +49,6 @@ export default function CreateNotePage() {
         return;
       }
 
-      alert("Note created successfully");
-
       router.push("/dashboard");
     } catch (error) {
       console.log(error);
@@ -160,7 +158,7 @@ export default function CreateNotePage() {
                     title: e.target.value,
                   })
                 }
-                className="h-14 w-full rounded-2xl border border-zinc-200 bg-white px-5 text-sm outline-none transition focus:border-black"
+                className="h-14 w-full rounded-2xl border border-zinc-200 text-zinc-800 bg-white px-5 text-sm outline-none transition focus:border-black"
                 required
               />
             </div>
@@ -180,7 +178,7 @@ export default function CreateNotePage() {
                     content: e.target.value,
                   })
                 }
-                className="min-h-[250px] w-full resize-none rounded-3xl border border-zinc-200 bg-white p-5 text-sm leading-7 outline-none transition focus:border-black"
+                className="min-h-[250px] w-full resize-none rounded-3xl border border-zinc-200 bg-white p-5 text-sm leading-7 outline-none transition focus:border-black text-zinc-800"
                 required
               />
             </div>
@@ -190,7 +188,7 @@ export default function CreateNotePage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex h-14 flex-1 items-center justify-center gap-2 rounded-2xl bg-black px-5 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
+                className="flex h-14 flex-1 items-center justify-center gap-2 rounded-2xl bg-black px-5 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70 pointer-cursor"
               >
                 {loading ? (
                   <>
